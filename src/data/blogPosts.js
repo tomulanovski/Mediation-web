@@ -1,0 +1,152 @@
+export const blogCategories = [
+  "All",
+  "Divorce",
+  "Child Custody",
+  "Mediation Process",
+  "Family Law",
+  "Conflict Resolution",
+];
+
+export const blogPosts = [
+  {
+    slug: "5-things-to-know-before-divorce-mediation",
+    title: "5 Things to Know Before Your First Divorce Mediation Session",
+    excerpt: "Walking into mediation for the first time can feel overwhelming. Here's what to expect and how to prepare for a productive experience.",
+    category: "Divorce",
+    author: "Shayna Cavanaugh",
+    date: "2026-01-15",
+    readTime: "6 min read",
+    featured: true,
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800",
+    content: [
+      { type: "paragraph", text: "Divorce mediation offers a collaborative alternative to traditional litigation, but walking into your first session can feel daunting. Understanding what to expect can help you feel more prepared and get the most out of the process." },
+      { type: "heading", text: "1. Both Parties Must Be Willing to Participate" },
+      { type: "paragraph", text: "Mediation is a voluntary process. Both spouses need to be committed to working together toward a resolution. This doesn't mean you need to agree on everything — in fact, disagreement is expected. What matters is a willingness to engage in good faith." },
+      { type: "heading", text: "2. It's More Affordable Than Litigation" },
+      { type: "paragraph", text: "On average, mediation costs a fraction of what court proceedings would. Because you're working together with one neutral mediator rather than paying two attorneys to battle in court, the savings can be substantial — often thousands of dollars." },
+      { type: "heading", text: "3. You Maintain Control of the Outcome" },
+      { type: "paragraph", text: "Unlike a court proceeding where a judge makes decisions for you, mediation puts the power in your hands. You and your spouse work together to create solutions that work for your unique situation." },
+      { type: "heading", text: "4. Bring Your Financial Documents" },
+      { type: "paragraph", text: "Being prepared with financial documentation helps sessions run smoothly. This typically includes:" },
+      { type: "list", items: ["Recent tax returns", "Bank and investment account statements", "Mortgage and debt information", "Pay stubs and income documentation", "List of assets and their approximate values"] },
+      { type: "heading", text: "5. It's Confidential" },
+      { type: "paragraph", text: "Everything discussed in mediation is confidential. This creates a safe space where both parties can speak openly about their needs and concerns without fear that their words will be used against them later." },
+      { type: "quote", text: "Mediation is not about winning or losing; it's about finding a solution that works for everyone.", attribution: "Shayna Cavanaugh" }
+    ]
+  },
+  {
+    slug: "child-custody-mediation-putting-kids-first",
+    title: "Child Custody Mediation: How to Put Your Kids First",
+    excerpt: "When parents can't agree on custody arrangements, mediation offers a child-focused approach that keeps your children's best interests at the center of every decision.",
+    category: "Child Custody",
+    author: "Daphne Cavanaugh",
+    date: "2026-01-08",
+    readTime: "7 min read",
+    featured: false,
+    image: "https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?w=800",
+    content: [
+      { type: "paragraph", text: "Custody disputes are among the most emotionally charged aspects of any separation. Children often bear the brunt of parental conflict, which is why child-focused mediation has become an increasingly popular alternative to courtroom battles." },
+      { type: "heading", text: "Why Mediation Works Better for Children" },
+      { type: "paragraph", text: "Research consistently shows that children fare better when their parents can cooperate and communicate effectively. Mediation creates a framework for this cooperation, helping parents develop parenting plans that truly serve their children's needs." },
+      { type: "heading", text: "Key Elements of a Parenting Plan" },
+      { type: "list", items: ["Regular custody schedule (weekdays, weekends, alternating weeks)", "Holiday and vacation arrangements", "Transportation and pick-up/drop-off logistics", "Communication methods between parents", "Decision-making authority for education, healthcare, and activities", "Provisions for future modifications as children grow"] },
+      { type: "heading", text: "Tips for a Successful Custody Mediation" },
+      { type: "paragraph", text: "Focus on your children's needs, not on winning. Come prepared with ideas about scheduling, but remain flexible. Remember that a plan that works for a toddler may need adjustment as your child enters school or becomes a teenager." },
+      { type: "quote", text: "The best custody arrangement is one where children feel loved and secure in both homes.", attribution: "Daphne Cavanaugh" }
+    ]
+  },
+  {
+    slug: "understanding-mediation-process-step-by-step",
+    title: "Understanding the Mediation Process: A Step-by-Step Guide",
+    excerpt: "Not sure what to expect from mediation? This comprehensive guide walks you through each stage of the process, from initial consultation to final agreement.",
+    category: "Mediation Process",
+    author: "Shayna Cavanaugh",
+    date: "2025-12-20",
+    readTime: "8 min read",
+    featured: false,
+    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800",
+    content: [
+      { type: "paragraph", text: "If you're considering mediation for your family dispute, understanding the process can help ease anxiety and set realistic expectations. Here's a comprehensive look at what happens from start to finish." },
+      { type: "heading", text: "Step 1: Initial Consultation" },
+      { type: "paragraph", text: "The process begins with a free consultation where you meet with a mediator to discuss your situation. This is your opportunity to ask questions, understand costs, and determine if mediation is right for your circumstances." },
+      { type: "heading", text: "Step 2: Agreement to Mediate" },
+      { type: "paragraph", text: "Both parties sign an agreement that establishes the ground rules for mediation, including confidentiality, good faith participation, and the mediator's role as a neutral facilitator." },
+      { type: "heading", text: "Step 3: Information Gathering" },
+      { type: "paragraph", text: "Both parties share relevant information, including financial documents, parenting concerns, and priorities. Full disclosure is essential for reaching fair agreements." },
+      { type: "heading", text: "Step 4: Joint Sessions" },
+      { type: "paragraph", text: "The mediator guides structured conversations where both parties can express their concerns, identify shared goals, and begin working toward solutions. Sessions typically last 2-3 hours." },
+      { type: "heading", text: "Step 5: Negotiation and Problem-Solving" },
+      { type: "paragraph", text: "Working through issues one by one, the mediator helps both parties explore creative options and find compromises that address everyone's core needs." },
+      { type: "heading", text: "Step 6: Drafting the Agreement" },
+      { type: "paragraph", text: "Once all issues are resolved, the mediator prepares a written agreement that captures everything you've decided. Both parties should have this reviewed by independent attorneys before signing." },
+      { type: "heading", text: "Step 7: Court Approval" },
+      { type: "paragraph", text: "The signed agreement is submitted to the court for approval, at which point it becomes a legally binding order." }
+    ]
+  },
+  {
+    slug: "mediation-vs-litigation-which-is-right",
+    title: "Mediation vs. Litigation: Which Is Right for Your Family?",
+    excerpt: "Comparing the two main approaches to resolving family disputes — cost, timeline, emotional impact, and outcomes.",
+    category: "Family Law",
+    author: "Shayna Cavanaugh",
+    date: "2025-12-10",
+    readTime: "5 min read",
+    featured: false,
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800",
+    content: [
+      { type: "paragraph", text: "When facing a family dispute, you generally have two paths: mediation or litigation. Understanding the differences can help you make the best choice for your family's unique situation." },
+      { type: "heading", text: "Cost Comparison" },
+      { type: "paragraph", text: "The average litigated divorce in Florida costs between $10,000 and $30,000 or more. Mediation typically costs between $3,000 and $8,000 total. The savings come from shorter timelines, fewer billable hours, and reduced court fees." },
+      { type: "heading", text: "Timeline" },
+      { type: "paragraph", text: "Litigated divorces can take 12-18 months or longer. Mediated divorces are often completed in 2-4 months. This faster resolution means less stress and uncertainty for everyone involved." },
+      { type: "heading", text: "Emotional Impact" },
+      { type: "paragraph", text: "Litigation is inherently adversarial — each side is represented by an attorney whose job is to 'win.' This approach often increases conflict and makes future co-parenting more difficult. Mediation, by contrast, teaches communication and problem-solving skills that benefit families long after the process is complete." },
+      { type: "heading", text: "When Litigation May Be Necessary" },
+      { type: "list", items: ["Domestic violence or safety concerns", "One party refuses to participate in good faith", "Significant power imbalances that can't be addressed in mediation", "Complex asset concealment or financial fraud"] },
+      { type: "paragraph", text: "For most families, however, mediation offers a more constructive, efficient, and affordable path forward." }
+    ]
+  },
+  {
+    slug: "how-to-prepare-financially-for-divorce",
+    title: "How to Prepare Financially for Divorce Mediation",
+    excerpt: "Financial preparation is key to a successful mediation. Learn what documents to gather and how to organize your financial picture.",
+    category: "Divorce",
+    author: "Daphne Cavanaugh",
+    date: "2025-11-28",
+    readTime: "6 min read",
+    featured: false,
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800",
+    content: [
+      { type: "paragraph", text: "One of the most important things you can do to ensure a smooth mediation process is to come prepared with a clear picture of your financial situation. Here's a comprehensive checklist to help you get organized." },
+      { type: "heading", text: "Essential Financial Documents" },
+      { type: "list", items: ["Last three years of tax returns", "Current pay stubs for both spouses", "Bank statements for all accounts (last 12 months)", "Investment and retirement account statements", "Mortgage statements and property tax records", "Credit card statements and other debt records", "Insurance policies (health, life, auto, home)", "Business financial statements if applicable"] },
+      { type: "heading", text: "Understanding Your Monthly Expenses" },
+      { type: "paragraph", text: "Create a detailed budget of your current monthly expenses and an estimate of what your post-divorce expenses might look like. This helps in negotiating spousal support and dividing assets in a way that allows both parties to maintain reasonable living standards." },
+      { type: "heading", text: "Valuing Your Assets" },
+      { type: "paragraph", text: "Some assets are straightforward — bank accounts have clear balances. Others, like real estate, businesses, or retirement accounts, may require professional valuation. Your mediator can help you determine when an outside expert is needed." },
+      { type: "quote", text: "The more prepared you are financially, the more efficient and productive your mediation sessions will be.", attribution: "Daphne Cavanaugh" }
+    ]
+  },
+  {
+    slug: "co-parenting-communication-strategies",
+    title: "Effective Co-Parenting Communication Strategies After Divorce",
+    excerpt: "Healthy communication between co-parents is essential for children's well-being. Here are practical strategies that work.",
+    category: "Child Custody",
+    author: "Daphne Cavanaugh",
+    date: "2025-11-15",
+    readTime: "5 min read",
+    featured: false,
+    image: "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=800",
+    content: [
+      { type: "paragraph", text: "After divorce, effective communication with your co-parent becomes one of the most important skills you can develop — not for your own sake, but for your children's emotional health and stability." },
+      { type: "heading", text: "Keep It Business-Like" },
+      { type: "paragraph", text: "Think of your co-parenting relationship as a business partnership focused on your children's well-being. Keep communications factual, brief, and child-focused. Avoid rehashing past grievances or engaging in emotional debates." },
+      { type: "heading", text: "Use Written Communication" },
+      { type: "paragraph", text: "Email and co-parenting apps provide a written record and allow both parties to respond thoughtfully rather than reactively. Apps like OurFamilyWizard or TalkingParents are specifically designed for co-parent communication." },
+      { type: "heading", text: "Establish Boundaries" },
+      { type: "list", items: ["Agree on preferred communication methods", "Set reasonable response time expectations", "Keep conversations focused on the children", "Never use children as messengers", "Respect each other's parenting time"] },
+      { type: "heading", text: "When Conflict Arises" },
+      { type: "paragraph", text: "Disagreements are inevitable. When they arise, take a pause before responding. If you can't resolve an issue directly, consider returning to mediation for a single session to work through the specific concern." }
+    ]
+  }
+];
