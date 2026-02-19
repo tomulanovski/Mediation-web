@@ -11,7 +11,7 @@ const benefits = [
   {
     icon: Clock,
     title: "Faster Resolution",
-    description: "Most cases are resolved in 2-4 sessions over 4-8 weeks, compared to 12-18 months for litigated cases."
+    description: "Most cases are resolved in 1-2 sessions of 3-4 hours, compared to 12-18 months for litigated cases."
   },
   {
     icon: Lock,
@@ -29,15 +29,15 @@ export default function WhyMediation() {
   return (
     <section className="py-20 lg:py-28 bg-[#faf9f6]">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
           <div>
             <SectionHeader
               label="Why Mediation"
               title={<>A Better Way to <span className="font-semibold">Resolve Disputes</span></>}
-              subtitle="Mediation offers a collaborative, less adversarial approach to resolving family conflicts — preserving relationships and protecting what matters most."
+              subtitle="Mediation gives families a respectful, collaborative way to resolve conflict without the stress and expense of going to court."
             />
 
-            <div className="grid sm:grid-cols-2 gap-8 mt-2">
+            <div className="grid grid-cols-2 gap-6 mt-2">
               {benefits.map((benefit, index) => (
                 <AnimatedSection key={benefit.title} delay={index * 0.1}>
                   <div className="flex items-start gap-4">

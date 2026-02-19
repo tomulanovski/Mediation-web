@@ -19,8 +19,7 @@ export default function CTASection() {
           </h2>
           <p className="text-[#a8b8c8] text-lg leading-relaxed mb-10 font-sans">
             Schedule a free 15-minute consultation to discuss your situation and
-            learn how mediation can help your family move forward with dignity and
-            mutual respect.
+            learn how mediation can help your family move forward.
           </p>
           <CTAButton text="Schedule Free Consultation" className="mx-auto" />
           <p className="mt-6 text-[#a8b8c8] text-sm font-sans">

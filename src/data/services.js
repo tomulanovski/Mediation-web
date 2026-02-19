@@ -3,26 +3,24 @@ export const services = [
     id: "divorce-mediation",
     icon: "Heart",
     title: "Divorce Mediation",
-    description: "Navigate the complexities of divorce with dignity and mutual respect. Our mediators help couples work through property division, spousal support, and all aspects of marital dissolution in a collaborative environment.",
+    description: "Our mediators help couples work through property division, spousal support, and all aspects of marital dissolution in a collaborative environment.",
     features: [
       "Property and asset division",
       "Spousal support negotiations",
       "Debt allocation",
-      "Retirement account division",
-      "Business valuation assistance"
+      "Retirement account division"
     ]
   },
   {
     id: "child-custody",
     icon: "Users",
     title: "Child Custody & Parenting Plans",
-    description: "Create custody arrangements and parenting plans that prioritize your children's well-being while respecting both parents' desire to remain actively involved in their children's lives.",
+    description: "Create custody arrangements and parenting plans that prioritize your children's well-being while respecting both parents' wishes.",
     features: [
       "Custody schedule development",
       "Holiday and vacation planning",
       "Decision-making authority",
-      "Communication protocols",
-      "Modification of existing orders"
+      "Communication protocols"
     ]
   },
   {
@@ -34,8 +32,7 @@ export const services = [
       "Real estate division",
       "Investment portfolio allocation",
       "Business interest valuation",
-      "Personal property distribution",
-      "Tax-efficient strategies"
+      "Personal property distribution"
     ]
   },
   {
@@ -46,7 +43,6 @@ export const services = [
     features: [
       "Asset protection planning",
       "Debt liability agreements",
-      "Estate planning coordination",
       "Business protection",
       "Future modification provisions"
     ]
@@ -58,7 +54,6 @@ export const services = [
     description: "Address complex issues involving family-owned businesses during separation or divorce. We help protect business interests while ensuring fair treatment for both parties.",
     features: [
       "Business valuation coordination",
-      "Ownership transition planning",
       "Buyout negotiations",
       "Ongoing involvement agreements",
       "Non-compete considerations"
@@ -73,8 +68,7 @@ export const services = [
       "Child support modifications",
       "Custody schedule adjustments",
       "Relocation negotiations",
-      "Spousal support changes",
-      "Parenting plan updates"
+      "Spousal support changes"
     ]
   }
 ];

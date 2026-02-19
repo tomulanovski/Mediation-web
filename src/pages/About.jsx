@@ -54,66 +54,22 @@ export default function About() {
               Dedicated to <span className="font-semibold">Peaceful Resolution</span>
             </h1>
             <p className="text-lg lg:text-xl text-[#5a6a7a] leading-relaxed font-sans">
-              Founded on the belief that families deserve a better way to resolve disputes,
-              Cavanaugh Mediation, PLLC brings together mother-daughter mediators with deep expertise
-              in family law and conflict resolution, committed to helping Florida families move forward
-              with dignity and mutual respect.
+            Founded on the belief that families deserve a better way to resolve disputes, 
+            Cavanaugh Mediation, PLLC brings together experienced mediators with deep 
+            expertise in family law and conflict resolution, committed to helping Florida families 
+            move forward with dignity and mutual respect.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Our Story */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <AnimatedSection>
-              <h2 className="text-3xl lg:text-4xl font-light text-[#1a1a1a] mb-6">
-                Our <span className="font-semibold">Story</span>
-              </h2>
-              <div className="space-y-4 text-[#5a6a7a] leading-relaxed font-sans">
-                <p>
-                  Cavanaugh Mediation was founded by Shayna Cavanaugh, ESQ after over two decades of
-                  family law practice where she witnessed the emotional and financial toll that
-                  adversarial divorce proceedings took on families. She envisioned a practice where
-                  couples could work through their differences with professional guidance, preserving
-                  their dignity and protecting their children from unnecessary conflict.
-                </p>
-                <p>
-                  Now joined by her daughter Daphne, who brings specialized international training
-                  in conflict resolution from Tel Aviv University, the firm offers families a unique
-                  combination of deep legal expertise and evidence-based mediation techniques.
-                </p>
-                <p>
-                  Based in Naples, Florida, our mother-daughter team brings both experience and fresh
-                  perspectives to help families navigate transitions with compassion and professionalism.
-                  Together, we're committed to creating a respectful environment where families can find
-                  solutions that work for everyone involved.
-                </p>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.2}>
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-br from-[#e8dcc4]/30 to-[#8ab4d5]/20" />
-                <img
-                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=600&fit=crop"
-                  alt="Professional handshake representing collaboration"
-                  className="relative w-full h-auto shadow-xl"
-                />
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
 
       {/* Our Values */}
       <section className="py-20 lg:py-28 bg-[#faf9f6]">
         <div className="container mx-auto px-6 lg:px-12">
           <SectionHeader
             label="Our Values"
-            title={<>Our <span className="font-semibold">Values</span></>}
-            subtitle="The principles that guide every interaction and decision at our firm."
+            title={<>The principles we bring to <span className="font-semibold block">every client, every case, and every conversation.</span></>}
             centered
           />
 
@@ -136,14 +92,14 @@ export default function About() {
         <div className="container mx-auto px-6 lg:px-12">
           <SectionHeader
             label="Our Team"
-            title={<>Meet Your <span className="font-semibold">Mediators</span></>}
+            title={<>Meet Our <span className="font-semibold">Mediators</span></>}
             subtitle="Experienced professionals dedicated to helping your family find resolution."
             centered
           />
 
           <div className="space-y-20">
             {mediators.map((mediator, index) => (
-              <AnimatedSection key={mediator.id}>
+              <AnimatedSection key={mediator.id} id={mediator.id}>
                 <div className={`grid lg:grid-cols-2 gap-12 items-start`}>
                   <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                     <div className="relative">

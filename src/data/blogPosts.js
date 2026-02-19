@@ -21,9 +21,9 @@ export const blogPosts = [
     content: [
       { type: "paragraph", text: "Divorce mediation offers a collaborative alternative to traditional litigation, but walking into your first session can feel daunting. Understanding what to expect can help you feel more prepared and get the most out of the process." },
       { type: "heading", text: "1. Both Parties Must Be Willing to Participate" },
-      { type: "paragraph", text: "Mediation is a voluntary process. Both spouses need to be committed to working together toward a resolution. This doesn't mean you need to agree on everything — in fact, disagreement is expected. What matters is a willingness to engage in good faith." },
+      { type: "paragraph", text: "Mediation is a voluntary process. Both spouses need to be committed to working together toward a resolution. This doesn't mean you need to agree on everything; in fact, disagreement is expected. What matters is a willingness to engage in good faith." },
       { type: "heading", text: "2. It's More Affordable Than Litigation" },
-      { type: "paragraph", text: "On average, mediation costs a fraction of what court proceedings would. Because you're working together with one neutral mediator rather than paying two attorneys to battle in court, the savings can be substantial — often thousands of dollars." },
+      { type: "paragraph", text: "On average, mediation costs a fraction of what court proceedings would. Because you're working together with one neutral mediator rather than paying two attorneys to battle in court, the savings can be substantial, often thousands of dollars." },
       { type: "heading", text: "3. You Maintain Control of the Outcome" },
       { type: "paragraph", text: "Unlike a court proceeding where a judge makes decisions for you, mediation puts the power in your hands. You and your spouse work together to create solutions that work for your unique situation." },
       { type: "heading", text: "4. Bring Your Financial Documents" },
@@ -31,7 +31,6 @@ export const blogPosts = [
       { type: "list", items: ["Recent tax returns", "Bank and investment account statements", "Mortgage and debt information", "Pay stubs and income documentation", "List of assets and their approximate values"] },
       { type: "heading", text: "5. It's Confidential" },
       { type: "paragraph", text: "Everything discussed in mediation is confidential. This creates a safe space where both parties can speak openly about their needs and concerns without fear that their words will be used against them later." },
-      { type: "quote", text: "Mediation is not about winning or losing; it's about finding a solution that works for everyone.", attribution: "Shayna Cavanaugh" }
     ]
   },
   {
@@ -43,7 +42,7 @@ export const blogPosts = [
     date: "2026-01-08",
     readTime: "7 min read",
     featured: false,
-    image: "https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?w=800",
+    image: "https://images.unsplash.com/photo-1634188157846-c6e3bdf99420?w=800&auto=format&fit=crop",
     content: [
       { type: "paragraph", text: "Custody disputes are among the most emotionally charged aspects of any separation. Children often bear the brunt of parental conflict, which is why child-focused mediation has become an increasingly popular alternative to courtroom battles." },
       { type: "heading", text: "Why Mediation Works Better for Children" },
@@ -52,11 +51,11 @@ export const blogPosts = [
       { type: "list", items: ["Regular custody schedule (weekdays, weekends, alternating weeks)", "Holiday and vacation arrangements", "Transportation and pick-up/drop-off logistics", "Communication methods between parents", "Decision-making authority for education, healthcare, and activities", "Provisions for future modifications as children grow"] },
       { type: "heading", text: "Tips for a Successful Custody Mediation" },
       { type: "paragraph", text: "Focus on your children's needs, not on winning. Come prepared with ideas about scheduling, but remain flexible. Remember that a plan that works for a toddler may need adjustment as your child enters school or becomes a teenager." },
-      { type: "quote", text: "The best custody arrangement is one where children feel loved and secure in both homes.", attribution: "Daphne Cavanaugh" }
     ]
   },
   {
     slug: "understanding-mediation-process-step-by-step",
+    hidden: true,
     title: "Understanding the Mediation Process: A Step-by-Step Guide",
     excerpt: "Not sure what to expect from mediation? This comprehensive guide walks you through each stage of the process, from initial consultation to final agreement.",
     category: "Mediation Process",
@@ -86,7 +85,7 @@ export const blogPosts = [
   {
     slug: "mediation-vs-litigation-which-is-right",
     title: "Mediation vs. Litigation: Which Is Right for Your Family?",
-    excerpt: "Comparing the two main approaches to resolving family disputes — cost, timeline, emotional impact, and outcomes.",
+    excerpt: "Comparing the two main approaches to resolving family disputes: cost, timeline, emotional impact, and outcomes.",
     category: "Family Law",
     author: "Shayna Cavanaugh",
     date: "2025-12-10",
@@ -100,7 +99,7 @@ export const blogPosts = [
       { type: "heading", text: "Timeline" },
       { type: "paragraph", text: "Litigated divorces can take 12-18 months or longer. Mediated divorces are often completed in 2-4 months. This faster resolution means less stress and uncertainty for everyone involved." },
       { type: "heading", text: "Emotional Impact" },
-      { type: "paragraph", text: "Litigation is inherently adversarial — each side is represented by an attorney whose job is to 'win.' This approach often increases conflict and makes future co-parenting more difficult. Mediation, by contrast, teaches communication and problem-solving skills that benefit families long after the process is complete." },
+      { type: "paragraph", text: "Litigation is inherently adversarial, with each side represented by an attorney whose job is to 'win.' This approach often increases conflict and makes future co-parenting more difficult. Mediation, by contrast, teaches communication and problem-solving skills that benefit families long after the process is complete." },
       { type: "heading", text: "When Litigation May Be Necessary" },
       { type: "list", items: ["Domestic violence or safety concerns", "One party refuses to participate in good faith", "Significant power imbalances that can't be addressed in mediation", "Complex asset concealment or financial fraud"] },
       { type: "paragraph", text: "For most families, however, mediation offers a more constructive, efficient, and affordable path forward." }
@@ -123,8 +122,7 @@ export const blogPosts = [
       { type: "heading", text: "Understanding Your Monthly Expenses" },
       { type: "paragraph", text: "Create a detailed budget of your current monthly expenses and an estimate of what your post-divorce expenses might look like. This helps in negotiating spousal support and dividing assets in a way that allows both parties to maintain reasonable living standards." },
       { type: "heading", text: "Valuing Your Assets" },
-      { type: "paragraph", text: "Some assets are straightforward — bank accounts have clear balances. Others, like real estate, businesses, or retirement accounts, may require professional valuation. Your mediator can help you determine when an outside expert is needed." },
-      { type: "quote", text: "The more prepared you are financially, the more efficient and productive your mediation sessions will be.", attribution: "Daphne Cavanaugh" }
+      { type: "paragraph", text: "Some assets are straightforward, like bank accounts with clear balances. Others, like real estate, businesses, or retirement accounts, may require professional valuation. Your mediator can help you determine when an outside expert is needed." },
     ]
   },
   {
@@ -138,7 +136,7 @@ export const blogPosts = [
     featured: false,
     image: "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=800",
     content: [
-      { type: "paragraph", text: "After divorce, effective communication with your co-parent becomes one of the most important skills you can develop — not for your own sake, but for your children's emotional health and stability." },
+      { type: "paragraph", text: "After divorce, effective communication with your co-parent becomes one of the most important skills you can develop, not for your own sake, but for your children's emotional health and stability." },
       { type: "heading", text: "Keep It Business-Like" },
       { type: "paragraph", text: "Think of your co-parenting relationship as a business partnership focused on your children's well-being. Keep communications factual, brief, and child-focused. Avoid rehashing past grievances or engaging in emotional debates." },
       { type: "heading", text: "Use Written Communication" },

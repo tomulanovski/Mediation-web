@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 import { siteConfig } from "@/config/siteConfig";
 import { navLinks } from "@/config/navigation";
 
@@ -19,14 +19,13 @@ export default function Footer() {
           {/* About */}
           <div>
             <img
-              src={siteConfig.logoUrl}
+              src="/assets/logo-white.webp"
               alt={siteConfig.name}
-              className="h-10 w-auto mb-6 brightness-0 invert"
+              className="h-10 w-auto mb-6"
             />
             <p className="text-[#a8b8c8] leading-relaxed text-sm font-sans">
-              Dedicated to helping Florida families resolve disputes with compassion,
-              expertise, and dignity. A mother-daughter mediation team committed to
-              peaceful resolution.
+            Dedicated to guiding Florida families through divorce, custody, 
+            and other legal matters with clarity, expertise, and care.
             </p>
           </div>
 
@@ -75,15 +74,6 @@ export default function Footer() {
                 >
                   <Phone className="w-4 h-4 text-[#8ab4d5] flex-shrink-0" />
                   {siteConfig.phone}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`mailto:${siteConfig.email}`}
-                  className="flex items-center gap-3 text-[#a8b8c8] hover:text-[#8ab4d5] transition-colors text-sm font-sans"
-                >
-                  <Mail className="w-4 h-4 text-[#8ab4d5] flex-shrink-0" />
-                  {siteConfig.email}
                 </a>
               </li>
               <li className="flex items-start gap-3 text-[#a8b8c8] text-sm font-sans">

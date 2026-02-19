@@ -10,7 +10,7 @@ export default function HeroSection() {
       {/* Background */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&h=900&fit=crop"
+          src="/assets/home_img.webp"
           alt=""
           className="w-full h-full object-cover"
         />
@@ -23,20 +23,8 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-3xl"
+          className="max-w-4xl"
         >
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="flex items-center gap-3 mb-6"
-          >
-            <div className="h-px w-12 bg-[#8ab4d5]" />
-            <span className="text-[#8ab4d5] font-medium tracking-wider text-sm uppercase font-sans">
-              Cavanaugh Mediation, PLLC
-            </span>
-          </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -53,9 +41,8 @@ export default function HeroSection() {
             transition={{ delay: 0.5, duration: 0.7 }}
             className="text-lg lg:text-xl text-white/80 leading-relaxed mb-10 max-w-2xl font-sans"
           >
-            A mother-daughter mediation team dedicated to helping Florida families
-            navigate divorce, custody, and family disputes — with dignity, respect,
-            and lasting solutions.
+            Family mediation helping Florida families navigate divorce, custody, 
+            and family disputes with respect and lasting solutions reflecting what matters most to each party.
           </motion.p>
 
           <motion.div

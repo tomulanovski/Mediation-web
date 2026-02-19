@@ -15,6 +15,7 @@ export default function Blog() {
   }, []);
 
   const filteredPosts = blogPosts.filter((post) => {
+    if (post.hidden) return false;
     const matchesCategory = selectedCategory === "All" || post.category === selectedCategory;
     const matchesSearch =
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -35,13 +36,13 @@ export default function Blog() {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="h-px w-12 bg-[#8ab4d5]" />
-              <span className="text-[#8ab4d5] font-medium tracking-wider text-sm uppercase font-sans">Resources</span>
+              <span className="text-[#8ab4d5] font-medium tracking-wider text-sm uppercase font-sans">Insights</span>
             </div>
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-light text-[#1a1a1a] leading-[1.15] mb-6">
-              Insights & <span className="font-semibold">Resources</span>
+              Recent Blog Posts
             </h1>
             <p className="text-lg lg:text-xl text-[#5a6a7a] leading-relaxed font-sans">
-              Expert guidance on mediation, family law, and navigating life transitions with dignity.
+              Expert guidance on mediation, family law, and navigating life transitions.
             </p>
           </motion.div>
         </div>

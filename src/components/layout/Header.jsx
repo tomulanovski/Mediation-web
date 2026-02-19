@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
+import { Menu, X, Phone, MapPin } from "lucide-react";
 import { siteConfig } from "@/config/siteConfig";
 import { navLinks } from "@/config/navigation";
 import { AnimatePresence, motion } from "framer-motion";
@@ -35,10 +35,6 @@ export default function Header() {
               <Phone className="w-4 h-4" />
               {siteConfig.phone}
             </a>
-            <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-2 hover:text-[#8ab4d5] transition-colors">
-              <Mail className="w-4 h-4" />
-              {siteConfig.email}
-            </a>
           </div>
           <div className="flex items-center gap-2 font-sans">
             <MapPin className="w-4 h-4 text-[#8ab4d5]" />
@@ -56,12 +52,12 @@ export default function Header() {
               <img
                 src={siteConfig.logoUrl}
                 alt={siteConfig.name}
-                className="h-10 w-auto"
+                className="h-11 w-auto shrink-0"
               />
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-8">
+            <nav className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
@@ -93,7 +89,7 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 text-[#1a1a1a]"
+              className="lg:hidden p-2 text-[#1a1a1a]"
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -110,7 +106,7 @@ export default function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-white md:hidden"
+            className="fixed inset-0 z-40 bg-white lg:hidden"
             style={{ top: "80px" }}
           >
             <motion.nav
@@ -147,10 +143,6 @@ export default function Header() {
                 <a href={`tel:${siteConfig.phone}`} className="flex items-center gap-2">
                   <Phone className="w-4 h-4" />
                   {siteConfig.phone}
-                </a>
-                <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-2">
-                  <Mail className="w-4 h-4" />
-                  {siteConfig.email}
                 </a>
               </div>
             </motion.nav>

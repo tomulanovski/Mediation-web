@@ -10,7 +10,7 @@ export default function MediatorsPreview() {
       <div className="container mx-auto px-6 lg:px-12">
         <SectionHeader
           label="Our Team"
-          title={<>Meet Your <span className="font-semibold">Mediators</span></>}
+          title={<>Meet Our <span className="font-semibold">Mediators</span></>}
           subtitle="Experienced professionals dedicated to helping your family find resolution."
           centered
         />
@@ -39,7 +39,7 @@ export default function MediatorsPreview() {
                   {mediator.shortBio}
                 </p>
                 <Link
-                  to="/about"
+                  to={`/about#${mediator.id}`}
                   className="inline-flex items-center gap-2 text-[#1a1a1a] text-sm font-medium font-sans group-hover:gap-3 transition-all"
                 >
                   Read Full Bio

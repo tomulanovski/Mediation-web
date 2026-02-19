@@ -35,7 +35,7 @@ export default function Services() {
             <p className="text-lg lg:text-xl text-[#5a6a7a] leading-relaxed font-sans">
               We offer a full range of family law mediation services,
               tailored to your unique situation and designed to help you
-              reach fair, lasting agreements.
+              reach fair and lasting agreements.
             </p>
           </motion.div>
         </div>
@@ -113,18 +113,15 @@ export default function Services() {
               </h2>
               <div className="space-y-4 text-[#5a6a7a] leading-relaxed font-sans">
                 <p>
-                  Mediation typically costs a fraction of traditional litigation, both
-                  financially and emotionally. Our transparent fee structure ensures you
-                  know what to expect from the start.
+                Mediation typically costs a fraction of traditional litigation, both financially and emotionally.
+                Our transparent fee structure ensures you know what to expect from the start.
                 </p>
                 <p>
-                  Initial consultations are offered at no charge, giving you the
-                  opportunity to meet with a mediator, discuss your situation, and
-                  determine if mediation is right for you — with no obligation.
+                Initial consultations are offered at no charge, giving you the opportunity to meet with a mediator, 
+                discuss your situation, and determine if mediation is right for you.
                 </p>
                 <p>
-                  Contact us to discuss your specific situation and receive a
-                  customized estimate based on the complexity of your case.
+                Contact us to discuss your specific situation.
                 </p>
               </div>
             </AnimatedSection>
@@ -139,8 +136,7 @@ export default function Services() {
                     "Flexible scheduling options",
                     "Professional mediation sessions",
                     "Document preparation assistance",
-                    "Final agreement drafting",
-                    "Follow-up support as needed"
+                    "Final agreement drafting"
                   ].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 text-[#5a6a7a] font-sans">
                       <CheckCircle className="w-5 h-5 text-[#8ab4d5] flex-shrink-0" />

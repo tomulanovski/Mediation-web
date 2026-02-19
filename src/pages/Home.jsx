@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import HeroSection from "@/components/home/HeroSection";
-import ServicesPreview from "@/components/home/ServicesPreview";
 import WhyMediation from "@/components/home/WhyMediation";
+import ServicesPreview from "@/components/home/ServicesPreview";
 import MediatorsPreview from "@/components/home/MediatorsPreview";
 import CTASection from "@/components/home/CTASection";
 
@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
-      <ServicesPreview />
       <WhyMediation />
+      <ServicesPreview />
       <MediatorsPreview />
       <CTASection />
     </div>

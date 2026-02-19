@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, MapPin, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import ContactForm from "@/components/contact/ContactForm";
@@ -13,12 +13,6 @@ const contactInfo = [
     link: `tel:${siteConfig.phone}`,
   },
   {
-    icon: Mail,
-    title: "Email",
-    content: siteConfig.email,
-    link: `mailto:${siteConfig.email}`,
-  },
-  {
     icon: MapPin,
     title: "Service Area",
     content: siteConfig.address.serviceArea,
@@ -27,7 +21,7 @@ const contactInfo = [
   {
     icon: Clock,
     title: "Hours",
-    content: "Monday - Friday\n9:00 AM - 5:00 PM",
+    content: "Monday - Saturday\n9:00 AM - 9:00 PM",
     link: null,
   },
 ];
@@ -70,7 +64,7 @@ export default function Contact() {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-4xl mx-auto">
             <AnimatedSection>
-              <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="grid md:grid-cols-3 gap-8 mb-12">
                 {contactInfo.map((info) => (
                   <div key={info.title} className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-[#1a1a1a] flex items-center justify-center flex-shrink-0">

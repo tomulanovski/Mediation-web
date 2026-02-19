@@ -11,10 +11,11 @@ import { blogPosts } from "@/data/blogPosts";
 export default function BlogPost() {
   const { slug } = useParams();
 
-  const post = blogPosts.find((p) => p.slug === slug);
-  const currentIndex = blogPosts.findIndex((p) => p.slug === slug);
-  const nextPost = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null;
-  const prevPost = currentIndex > 0 ? blogPosts[currentIndex - 1] : null;
+  const post = blogPosts.find((p) => p.slug === slug && !p.hidden);
+  const visiblePosts = blogPosts.filter((p) => !p.hidden);
+  const currentIndex = visiblePosts.findIndex((p) => p.slug === slug);
+  const nextPost = currentIndex < visiblePosts.length - 1 ? visiblePosts[currentIndex + 1] : null;
+  const prevPost = currentIndex > 0 ? visiblePosts[currentIndex - 1] : null;
 
   useEffect(() => {
     if (post) {
