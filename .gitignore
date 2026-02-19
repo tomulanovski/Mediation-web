@@ -1,7 +1,33 @@
+# Dependencies
 node_modules
+
+# Build output
 dist
+
+# Environment variables
 .env
 .env.local
-.DS_Store
+*.local
+
+# Logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vite cache
+.vite
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Claude
 .claude/
+
+# Raw/source assets (optimized .webp files are committed instead)
+public/assets/*.HEIC
+public/assets/*.jpg
+public/assets/*.jpeg
+public/assets/*.png
