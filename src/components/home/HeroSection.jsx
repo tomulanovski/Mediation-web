@@ -42,7 +42,7 @@ export default function HeroSection() {
             className="text-lg lg:text-xl text-white/80 leading-relaxed mb-10 max-w-2xl font-sans"
           >
             Family mediation helping Florida families navigate divorce, custody, 
-            and family disputes with respect and lasting solutions reflecting what matters most to each party.
+            and family disputes with respect and neutrality.
           </motion.p>
 
           <motion.div
