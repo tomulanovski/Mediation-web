@@ -153,8 +153,8 @@ export default function Services() {
               Start Your Journey to <span className="font-semibold">Resolution</span>
             </h2>
             <p className="text-[#5a6a7a] text-lg leading-relaxed mb-10 font-sans">
-              Every family's situation is unique. Schedule a mediation session to
-              discuss your needs and learn how our services can help you move forward.
+              Every family's situation is unique. Schedule a 
+              mediation session today and let us help you find a path forward that works for everyone.
             </p>
             <Link to="/contact">
               <Button className="bg-[#1a1a1a] hover:bg-[#333333] text-white px-10 py-6 text-base group transition-all duration-300 font-sans">
