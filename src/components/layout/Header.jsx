@@ -82,7 +82,7 @@ export default function Header() {
                 rel="noopener noreferrer"
                 className="bg-[#1a1a1a] hover:bg-[#333333] text-white px-6 py-2.5 text-sm font-medium transition-all duration-300 font-sans"
               >
-                Book Consultation
+                Book Mediation
               </a>
             </nav>
 
@@ -136,7 +136,7 @@ export default function Header() {
                   rel="noopener noreferrer"
                   className="block bg-[#1a1a1a] text-white text-center py-3 px-6 text-base font-medium font-sans"
                 >
-                  Book Consultation
+                  Book Mediation
                 </a>
               </div>
               <div className="mt-6 space-y-3 text-sm text-[#5a6a7a] font-sans">

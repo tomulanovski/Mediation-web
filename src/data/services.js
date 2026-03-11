@@ -14,10 +14,10 @@ export const services = [
   {
     id: "child-custody",
     icon: "Users",
-    title: "Child Custody & Parenting Plans",
-    description: "Create custody arrangements and parenting plans that prioritize your children's well-being while respecting both parents' wishes.",
+    title: "Time-Sharing & Parenting Plans",
+    description: "Create time-sharing arrangements and parenting plans that prioritize your children's well-being while respecting both parents' wishes.",
     features: [
-      "Custody schedule development",
+      "Time-sharing schedule development",
       "Holiday and vacation planning",
       "Decision-making authority",
       "Communication protocols"
@@ -63,10 +63,10 @@ export const services = [
     id: "post-decree",
     icon: "Briefcase",
     title: "Post-Decree Modifications",
-    description: "Life circumstances change, and sometimes existing agreements need to be modified. We help families revisit and update custody, support, and other arrangements as needed.",
+    description: "Life circumstances change, and sometimes existing agreements need to be modified. We help families revisit and update parenting plans, support, and other arrangements as needed.",
     features: [
       "Child support modifications",
-      "Custody schedule adjustments",
+      "Parenting plan adjustments",
       "Relocation negotiations",
       "Spousal support changes"
     ]
@@ -76,21 +76,16 @@ export const services = [
 export const processSteps = [
   {
     step: "01",
-    title: "Initial Consultation",
-    description: "Meet with one of our mediators to discuss your situation, understand the mediation process, and determine if it's right for you."
-  },
-  {
-    step: "02",
     title: "Information Gathering",
     description: "Both parties compile necessary documents and information. We'll guide you on what's needed for productive sessions."
   },
   {
-    step: "03",
+    step: "02",
     title: "Mediation Sessions",
     description: "Work together in a neutral environment to identify issues, explore options, and develop solutions that work for everyone."
   },
   {
-    step: "04",
+    step: "03",
     title: "Agreement & Resolution",
     description: "Once consensus is reached, we prepare a comprehensive agreement that can be submitted to the court for approval."
   }

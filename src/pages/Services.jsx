@@ -86,7 +86,7 @@ export default function Services() {
             light
           />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {processSteps.map((step, index) => (
               <AnimatedSection key={step.step} delay={index * 0.15}>
                 <div className="relative">
@@ -117,10 +117,6 @@ export default function Services() {
                 Our transparent fee structure ensures you know what to expect from the start.
                 </p>
                 <p>
-                Initial consultations are offered at no charge, giving you the opportunity to meet with a mediator, 
-                discuss your situation, and determine if mediation is right for you.
-                </p>
-                <p>
                 Contact us to discuss your specific situation.
                 </p>
               </div>
@@ -131,7 +127,6 @@ export default function Services() {
                 <h3 className="text-2xl font-semibold text-[#1a1a1a] mb-6">What's Included</h3>
                 <ul className="space-y-4">
                   {[
-                    "Free initial consultation",
                     "Comprehensive intake process",
                     "Flexible scheduling options",
                     "Professional mediation sessions",
@@ -158,12 +153,12 @@ export default function Services() {
               Start Your Journey to <span className="font-semibold">Resolution</span>
             </h2>
             <p className="text-[#5a6a7a] text-lg leading-relaxed mb-10 font-sans">
-              Every family's situation is unique. Schedule a free consultation to
+              Every family's situation is unique. Schedule a mediation session to
               discuss your needs and learn how our services can help you move forward.
             </p>
             <Link to="/contact">
               <Button className="bg-[#1a1a1a] hover:bg-[#333333] text-white px-10 py-6 text-base group transition-all duration-300 font-sans">
-                Schedule Free Consultation
+                Schedule Mediation
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>

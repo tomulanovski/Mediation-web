@@ -18,10 +18,9 @@ export default function CTASection() {
             Ready to Take the <span className="font-semibold">First Step?</span>
           </h2>
           <p className="text-[#a8b8c8] text-lg leading-relaxed mb-10 font-sans">
-            Schedule a free 15-minute consultation to discuss your situation and
-            learn how mediation can help your family move forward.
+          Schedule your mediation today to take control of your family's future on your own terms with us as a neutral guide.
           </p>
-          <CTAButton text="Schedule Free Consultation" className="mx-auto" />
+          <CTAButton text="Schedule Mediation" className="mx-auto" />
           <p className="mt-6 text-[#a8b8c8] text-sm font-sans">
             Or call us directly at{" "}
             <a href={`tel:${siteConfig.phone}`} className="text-[#8ab4d5] hover:underline">

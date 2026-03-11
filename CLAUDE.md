@@ -14,13 +14,23 @@ No test runner is configured.
 
 ## Deployment workflow
 
-Development is done locally. To deploy:
+**Local — push changes:**
 ```bash
 git add . && git commit -m "..." && git push
-# On the DigitalOcean droplet:
-git pull && systemctl reload <service>   # or pm2 restart / nginx reload as appropriate
 ```
-The droplet IP and credentials are in `.env` (gitignored — never commit them).
+
+**Server — after SSHing in:**
+```bash
+# SSH into the droplet (credentials in .env, gitignored)
+ssh root@<DROPLET_IP>
+
+# Then run:
+cd /var/www/mediation   # or wherever the project lives on the server
+git pull
+npm install             # only needed if package.json changed, but safe to always run
+npm run build           # recompiles dist/ which nginx serves
+systemctl reload nginx
+```
 
 ## Code standards
 

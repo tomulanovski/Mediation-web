@@ -41,7 +41,7 @@ export default function HeroSection() {
             transition={{ delay: 0.5, duration: 0.7 }}
             className="text-lg lg:text-xl text-white/80 leading-relaxed mb-10 max-w-2xl font-sans"
           >
-            Family mediation helping Florida families navigate divorce, custody, 
+            Family mediation helping Florida families navigate divorce 
             and family disputes with respect and neutrality.
           </motion.p>
 
@@ -51,7 +51,7 @@ export default function HeroSection() {
             transition={{ delay: 0.7, duration: 0.7 }}
             className="flex flex-col sm:flex-row gap-4"
           >
-            <CTAButton text="Schedule Free Consultation" />
+            <CTAButton text="Schedule Mediation" />
             <Button
               asChild
               variant="outline"

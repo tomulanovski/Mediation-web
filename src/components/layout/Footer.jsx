@@ -5,7 +5,7 @@ import { navLinks } from "@/config/navigation";
 
 const serviceLinks = [
   { label: "Divorce Mediation", path: "/services" },
-  { label: "Child Custody", path: "/services" },
+  { label: "Parenting Plans", path: "/services" },
   { label: "Property Division", path: "/services" },
   { label: "Prenuptial Agreements", path: "/services" },
   { label: "Post-Decree Modifications", path: "/services" },
@@ -24,7 +24,7 @@ export default function Footer() {
               className="h-10 w-auto mb-6"
             />
             <p className="text-[#a8b8c8] leading-relaxed text-sm font-sans">
-            Dedicated to guiding Florida families through divorce, custody, 
+            Dedicated to guiding Florida families through divorce
             and other legal matters with clarity, expertise, and care.
             </p>
           </div>

@@ -111,9 +111,9 @@ export default function ContactForm() {
               <option value="">Select a subject</option>
               <option value="General Inquiry">General Inquiry</option>
               <option value="Divorce Mediation">Divorce Mediation</option>
-              <option value="Child Custody">Child Custody</option>
+              <option value="Parenting Plans / Time-Sharing">Parenting Plans / Time-Sharing</option>
               <option value="Property Division">Property Division</option>
-              <option value="Schedule Consultation">Schedule Consultation</option>
+              <option value="Schedule Mediation">Schedule Mediation</option>
               <option value="Other">Other</option>
             </select>
           </div>

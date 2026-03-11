@@ -175,7 +175,7 @@ export default function About() {
             </h2>
             <p className="text-[#a8b8c8] text-lg leading-relaxed mb-10 font-sans">
               We're here to help you find a path forward. Schedule a confidential
-              consultation to discuss your situation and learn how mediation can help.
+              mediation session to discuss your situation and learn how we can help.
             </p>
             <Link to="/contact">
               <Button className="bg-[#8ab4d5] hover:bg-[#7aa3c4] text-[#1a1a1a] px-10 py-6 text-base group transition-all duration-300 font-medium font-sans">

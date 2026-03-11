@@ -33,7 +33,7 @@ export const mediators = [
     shortBio: "Daphne brings both the emotional and financial expertise needed to help families navigate even the most complex disputes.",
     bio: [
       "Daphne Cavanaugh earned both her MA in Conflict Resolution and Mediation and her MBA from Tel Aviv University, giving her a strong foundation in both mediation practice and the financial and business complexities that often arise in family disputes.",
-      "Daphne brings both the training and the temperament to help people work through difficult transitions thoughtfully, whether they are facing divorce, custody disputes, co-parenting challenges, or prenuptial and postnuptial agreements.",
+      "Daphne brings both the training and the temperament to help people work through difficult transitions thoughtfully, whether they are facing divorce, co-parenting challenges, or prenuptial and postnuptial agreements.",
       "She is dedicated to helping Florida families move forward with clarity, and with agreements that reflect what matters most to them."
     ],
     education: [

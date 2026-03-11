@@ -16,7 +16,7 @@ export default function CTAButton({ text, className, variant = "default", size =
     >
       <a href={siteConfig.calendlyUrl} target="_blank" rel="noopener noreferrer">
         <Calendar className="mr-2 h-4 w-4" />
-        {text || "Book Free Consultation"}
+        {text || "Book Mediation"}
       </a>
     </Button>
   );

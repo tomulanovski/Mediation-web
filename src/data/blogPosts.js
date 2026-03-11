@@ -1,7 +1,7 @@
 export const blogCategories = [
   "All",
   "Divorce",
-  "Child Custody",
+  "Time-Sharing",
   "Mediation Process",
   "Family Law",
   "Conflict Resolution",
@@ -57,7 +57,7 @@ export const blogPosts = [
     slug: "understanding-mediation-process-step-by-step",
     hidden: true,
     title: "Understanding the Mediation Process: A Step-by-Step Guide",
-    excerpt: "Not sure what to expect from mediation? This comprehensive guide walks you through each stage of the process, from initial consultation to final agreement.",
+    excerpt: "Not sure what to expect from mediation? This comprehensive guide walks you through each stage of the process, from initial mediation to final agreement.",
     category: "Mediation Process",
     author: "Shayna Cavanaugh",
     date: "2025-12-20",
@@ -66,8 +66,8 @@ export const blogPosts = [
     image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800",
     content: [
       { type: "paragraph", text: "If you're considering mediation for your family dispute, understanding the process can help ease anxiety and set realistic expectations. Here's a comprehensive look at what happens from start to finish." },
-      { type: "heading", text: "Step 1: Initial Consultation" },
-      { type: "paragraph", text: "The process begins with a free consultation where you meet with a mediator to discuss your situation. This is your opportunity to ask questions, understand costs, and determine if mediation is right for your circumstances." },
+      { type: "heading", text: "Step 1: Initial Mediation" },
+      { type: "paragraph", text: "The process begins with an initial mediation session where you meet with a mediator to discuss your situation. This is your opportunity to ask questions, understand costs, and determine if mediation is right for your circumstances." },
       { type: "heading", text: "Step 2: Agreement to Mediate" },
       { type: "paragraph", text: "Both parties sign an agreement that establishes the ground rules for mediation, including confidentiality, good faith participation, and the mediator's role as a neutral facilitator." },
       { type: "heading", text: "Step 3: Information Gathering" },

@@ -146,11 +146,11 @@ export default function BlogPost() {
               Ready to Start Your <span className="font-semibold">Journey?</span>
             </h2>
             <p className="text-[#a8b8c8] text-lg leading-relaxed mb-10 font-sans">
-              Schedule a free consultation to discuss how mediation can help your family.
+              Schedule a mediation session to discuss how we can help your family.
             </p>
             <Link to="/contact">
               <Button className="bg-[#8ab4d5] hover:bg-[#7aa3c4] text-[#1a1a1a] px-10 py-6 text-base font-sans">
-                Schedule Consultation
+                Schedule Mediation
               </Button>
             </Link>
           </AnimatedSection>

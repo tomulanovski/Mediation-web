@@ -6,10 +6,10 @@ export default function CalendlyEmbed() {
   return (
     <div>
       <h2 className="text-2xl font-semibold text-[#1a1a1a] mb-2">
-        Book a Free Consultation
+        Book a Mediation
       </h2>
       <p className="text-[#5a6a7a] mb-6 font-sans text-sm">
-        Select a time for a free 15-minute consultation to discuss your situation.
+        Select a time for a mediation session to discuss your situation.
       </p>
 
       {/* Desktop: inline widget */}
@@ -22,7 +22,7 @@ export default function CalendlyEmbed() {
 
       {/* Mobile: button fallback (avoids iframe scroll issues) */}
       <div className="md:hidden">
-        <CTAButton text="Schedule Your Consultation" className="w-full" />
+        <CTAButton text="Schedule Your Mediation" className="w-full" />
         <p className="text-center text-[#5a6a7a] text-xs mt-3 font-sans">
           Opens scheduling in a new tab
         </p>
