@@ -128,7 +128,7 @@ export default function Pricing() {
                 items={[
                   "Up to 8 hours of mediation sessions",
                   "Pre-session preparation and document review",
-                  "Drafting of the final settlement agreement and parenting plan (if applicable)",
+                  "Drafting of the Martial Settlement Agreement and Parenting Plan",
                   "Walk through of how to file documents",
                   "No extra charges at any stage",
                 ]}
