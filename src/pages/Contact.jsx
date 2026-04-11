@@ -1,5 +1,5 @@
-import { useEffect } from "react";
 import { Phone, MapPin, Clock } from "lucide-react";
+import useSEO from "@/hooks/useSEO";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import ContactForm from "@/components/contact/ContactForm";
@@ -27,9 +27,11 @@ const contactInfo = [
 ];
 
 export default function Contact() {
-  useEffect(() => {
-    document.title = "Contact Us | Cavanaugh Mediation, PLLC";
-  }, []);
+  useSEO({
+    title: "Contact Us | Cavanaugh Mediation, PLLC",
+    description: "Schedule a family mediation session with Cavanaugh Mediation. Call (239) 212-1599 or book online. Serving all of Florida virtually.",
+    canonical: "/contact",
+  });
 
   return (
     <div>

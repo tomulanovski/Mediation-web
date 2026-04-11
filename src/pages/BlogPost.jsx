@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Calendar, User, ArrowLeft, ArrowRight } from "lucide-react";
@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import BlogContent from "@/components/blog/BlogContent";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import { blogPosts } from "@/data/blogPosts";
+import { siteConfig } from "@/config/siteConfig";
+import useSEO from "@/hooks/useSEO";
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -17,11 +19,32 @@ export default function BlogPost() {
   const nextPost = currentIndex < visiblePosts.length - 1 ? visiblePosts[currentIndex + 1] : null;
   const prevPost = currentIndex > 0 ? visiblePosts[currentIndex - 1] : null;
 
-  useEffect(() => {
-    if (post) {
-      document.title = `${post.title} | Cavanaugh Mediation`;
-    }
-  }, [post]);
+  const articleSchema = useMemo(() => post ? {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.excerpt,
+    "author": {
+      "@type": "Person",
+      "name": post.author,
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": siteConfig.name,
+      "logo": { "@type": "ImageObject", "url": `${siteConfig.url}/assets/logo.webp` },
+    },
+    "datePublished": post.date,
+    "image": post.image,
+    "mainEntityOfPage": `${siteConfig.url}/blog/${post.slug}`,
+  } : null, [post]);
+
+  useSEO({
+    title: post ? `${post.title} | Cavanaugh Mediation` : "Article Not Found",
+    description: post?.excerpt,
+    canonical: post ? `/blog/${post.slug}` : undefined,
+    type: "article",
+    schema: articleSchema,
+  });
 
   if (!post) {
     return (

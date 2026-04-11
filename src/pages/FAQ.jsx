@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useMemo } from "react";
 import { motion } from "framer-motion";
 import {
   Accordion,
@@ -8,35 +8,28 @@ import {
 } from "@/components/ui/accordion";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import { faqs } from "@/data/faqs";
+import useSEO from "@/hooks/useSEO";
 
 export default function FAQ() {
-  useEffect(() => {
-    document.title = "FAQ | Cavanaugh Mediation, PLLC";
+  const faqSchema = useMemo(() => ({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer,
+      },
+    })),
+  }), []);
 
-    const faqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": faqs.map((faq) => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.answer,
-        },
-      })),
-    };
-
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.textContent = JSON.stringify(faqSchema);
-    script.id = "faq-schema";
-    document.head.appendChild(script);
-
-    return () => {
-      const el = document.getElementById("faq-schema");
-      if (el) el.remove();
-    };
-  }, []);
+  useSEO({
+    title: "FAQ | Cavanaugh Mediation, PLLC",
+    description: "Answers to common questions about family mediation in Florida — costs, confidentiality, process, and what to expect.",
+    canonical: "/faq",
+    schema: faqSchema,
+  });
 
   return (
     <div>

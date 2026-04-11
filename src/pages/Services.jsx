@@ -1,6 +1,6 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Heart, Users, FileText, Shield, Home, Briefcase, ArrowRight, CheckCircle } from "lucide-react";
+import useSEO from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/shared/AnimatedSection";
@@ -10,9 +10,11 @@ import { services, processSteps } from "@/data/services";
 const iconMap = { Heart, Users, FileText, Shield, Home, Briefcase };
 
 export default function Services() {
-  useEffect(() => {
-    document.title = "Our Services | Cavanaugh Mediation, PLLC";
-  }, []);
+  useSEO({
+    title: "Family Mediation Services | Cavanaugh Mediation, PLLC",
+    description: "Divorce mediation, parenting plans, property division, prenuptial agreements, and post-decree modifications. Affordable family mediation throughout Florida.",
+    canonical: "/services",
+  });
 
   return (
     <div>
