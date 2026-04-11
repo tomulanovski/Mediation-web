@@ -13,7 +13,7 @@ const serviceLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1a1a1a] text-white">
+    <footer className="bg-[#1a1a1a] text-white" role="contentinfo">
       <div className="container mx-auto px-6 lg:px-12 py-16 lg:py-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* About */}
@@ -102,9 +102,17 @@ export default function Footer() {
           <p className="text-[#a8b8c8] text-sm font-sans">
             &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
-          <p className="text-[#a8b8c8] text-sm font-sans">
-            {siteConfig.address.serviceArea}
-          </p>
+          <div className="flex items-center gap-6">
+            <Link
+              to="/privacy"
+              className="text-[#a8b8c8] hover:text-[#8ab4d5] transition-colors text-sm font-sans"
+            >
+              Privacy Policy
+            </Link>
+            <span className="text-[#a8b8c8] text-sm font-sans">
+              {siteConfig.address.serviceArea}
+            </span>
+          </div>
         </div>
       </div>
     </footer>

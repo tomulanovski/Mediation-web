@@ -26,7 +26,7 @@ export default function MediatorsPreview() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <p className="text-[#8ab4d5] font-medium tracking-wider text-sm uppercase font-sans mb-2">
+                <p className="text-[#3b7797] font-medium tracking-wider text-sm uppercase font-sans mb-2">
                   {mediator.title}
                 </p>
                 <h3 className="text-2xl font-semibold text-[#1a1a1a] mb-2">

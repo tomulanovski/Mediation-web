@@ -50,7 +50,7 @@ export default function About() {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="h-px w-12 bg-[#8ab4d5]" />
-              <span className="text-[#8ab4d5] font-medium tracking-wider text-sm uppercase font-sans">About Our Firm</span>
+              <span className="text-[#3b7797] font-medium tracking-wider text-sm uppercase font-sans">About Our Firm</span>
             </div>
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-light text-[#1a1a1a] leading-[1.15] mb-6">
               Dedicated to <span className="font-semibold">Peaceful Resolution</span>
@@ -115,7 +115,7 @@ export default function About() {
                   </div>
 
                   <div className={index % 2 === 1 ? "lg:order-1" : ""}>
-                    <p className="text-[#8ab4d5] font-medium tracking-wider text-sm uppercase mb-2 font-sans">
+                    <p className="text-[#3b7797] font-medium tracking-wider text-sm uppercase mb-2 font-sans">
                       {mediator.title}
                     </p>
                     <h3 className="text-3xl font-semibold text-[#1a1a1a] mb-2">

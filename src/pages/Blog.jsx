@@ -39,7 +39,7 @@ export default function Blog() {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="h-px w-12 bg-[#8ab4d5]" />
-              <span className="text-[#8ab4d5] font-medium tracking-wider text-sm uppercase font-sans">Insights</span>
+              <span className="text-[#3b7797] font-medium tracking-wider text-sm uppercase font-sans">Insights</span>
             </div>
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-light text-[#1a1a1a] leading-[1.15] mb-6">
               Recent Blog Posts
@@ -56,8 +56,10 @@ export default function Blog() {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             <div className="relative w-full lg:w-96">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-[#5a6a7a]" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-[#5a6a7a]" aria-hidden="true" />
+              <label htmlFor="blog-search" className="sr-only">Search articles</label>
               <Input
+                id="blog-search"
                 placeholder="Search articles..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -70,6 +72,7 @@ export default function Blog() {
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
+                  aria-pressed={selectedCategory === category}
                   className={`px-4 py-2 text-sm font-medium transition-colors font-sans ${
                     selectedCategory === category
                       ? "bg-[#1a1a1a] text-white"

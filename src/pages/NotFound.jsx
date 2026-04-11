@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <div className="min-h-[60vh] flex items-center justify-center">
       <div className="text-center px-6">
-        <p className="text-[#8ab4d5] font-medium tracking-wider text-sm uppercase mb-4 font-sans">
+        <p className="text-[#3b7797] font-medium tracking-wider text-sm uppercase mb-4 font-sans">
           Page Not Found
         </p>
         <h1 className="text-5xl lg:text-6xl font-light text-[#1a1a1a] mb-4">

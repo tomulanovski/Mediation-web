@@ -44,7 +44,7 @@ export default function FAQ() {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="h-px w-12 bg-[#8ab4d5]" />
-              <span className="text-[#8ab4d5] font-medium tracking-wider text-sm uppercase font-sans">
+              <span className="text-[#3b7797] font-medium tracking-wider text-sm uppercase font-sans">
                 FAQ
               </span>
             </div>

@@ -5,7 +5,7 @@ export default function SectionHeader({ label, title, subtitle, centered = false
     <AnimatedSection className={`mb-16 ${centered ? "text-center" : ""}`}>
       <div className={`flex items-center gap-3 mb-4 ${centered ? "justify-center" : ""}`}>
         <div className="h-px w-12 bg-[#8ab4d5]" />
-        <span className="text-[#8ab4d5] font-medium tracking-wider text-sm uppercase font-sans">
+        <span className={`${light ? "text-[#8ab4d5]" : "text-[#3b7797]"} font-medium tracking-wider text-sm uppercase font-sans`}>
           {label}
         </span>
         {centered && <div className="h-px w-12 bg-[#8ab4d5]" />}

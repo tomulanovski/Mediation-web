@@ -29,7 +29,7 @@ export default function Services() {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="h-px w-12 bg-[#8ab4d5]" />
-              <span className="text-[#8ab4d5] font-medium tracking-wider text-sm uppercase font-sans">Our Services</span>
+              <span className="text-[#3b7797] font-medium tracking-wider text-sm uppercase font-sans">Our Services</span>
             </div>
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-light text-[#1a1a1a] leading-[1.15] mb-6">
               Comprehensive <span className="font-semibold">Family Mediation</span>
