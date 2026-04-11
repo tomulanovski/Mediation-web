@@ -12,6 +12,30 @@ import { faqs } from "@/data/faqs";
 export default function FAQ() {
   useEffect(() => {
     document.title = "FAQ | Cavanaugh Mediation, PLLC";
+
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer,
+        },
+      })),
+    };
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify(faqSchema);
+    script.id = "faq-schema";
+    document.head.appendChild(script);
+
+    return () => {
+      const el = document.getElementById("faq-schema");
+      if (el) el.remove();
+    };
   }, []);
 
   return (

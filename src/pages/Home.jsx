@@ -7,7 +7,7 @@ import CTASection from "@/components/home/CTASection";
 
 export default function Home() {
   useEffect(() => {
-    document.title = "Cavanaugh Mediation, PLLC | Family Mediation in Naples, FL";
+    document.title = "Cavanaugh Mediation, PLLC | Family Mediation in all of Florida";
   }, []);
 
   return (

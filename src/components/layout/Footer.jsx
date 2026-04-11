@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, MapPin } from "lucide-react";
+import { Phone, MapPin, Facebook } from "lucide-react";
 import { siteConfig } from "@/config/siteConfig";
 import { navLinks } from "@/config/navigation";
 
@@ -27,6 +27,17 @@ export default function Footer() {
             Dedicated to guiding Florida families through divorce
             and other legal matters with clarity, expertise, and care.
             </p>
+            {siteConfig.social.facebook && (
+              <a
+                href={siteConfig.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-4 text-[#a8b8c8] hover:text-[#8ab4d5] transition-colors text-sm font-sans"
+              >
+                <Facebook className="w-5 h-5" />
+                <span>Facebook</span>
+              </a>
+            )}
           </div>
 
           {/* Quick Links */}
@@ -78,11 +89,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3 text-[#a8b8c8] text-sm font-sans">
                 <MapPin className="w-4 h-4 text-[#8ab4d5] flex-shrink-0 mt-0.5" />
-                <span>
-                  {siteConfig.address.city}, {siteConfig.address.state}
-                  <br />
-                  {siteConfig.address.serviceArea}
-                </span>
+                <span>{siteConfig.address.serviceArea}</span>
               </li>
             </ul>
           </div>
@@ -96,7 +103,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
           <p className="text-[#a8b8c8] text-sm font-sans">
-            {siteConfig.address.city}, {siteConfig.address.state}
+            {siteConfig.address.serviceArea}
           </p>
         </div>
       </div>
