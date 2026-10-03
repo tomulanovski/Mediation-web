@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import SectionHeader from "@/components/shared/SectionHeader";
 import { mediators } from "@/data/mediators";
-import useSEO from "@/hooks/useSEO";
 
 const values = [
   {
@@ -31,11 +30,6 @@ const values = [
 ];
 
 export default function About() {
-  useSEO({
-    title: "About Us | Cavanaugh Mediation, PLLC",
-    description: "Meet Shayna and Daphne Cavanaugh — Florida Supreme Court Certified family mediators with decades of combined experience in family law and conflict resolution.",
-    canonical: "/about",
-  });
 
   return (
     <div>

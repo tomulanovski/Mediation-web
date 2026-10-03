@@ -33,7 +33,7 @@ export default function ServicesPreview() {
                     {service.description.substring(0, 120)}...
                   </p>
                   <Link
-                    to="/services"
+                    to={`/services/${service.id}`}
                     className="inline-flex items-center gap-2 text-[#1a1a1a] text-sm font-medium font-sans group-hover:gap-3 transition-all"
                   >
                     Learn More

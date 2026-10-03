@@ -1,13 +1,7 @@
 import { motion } from "framer-motion";
-import useSEO from "@/hooks/useSEO";
 import { siteConfig } from "@/config/siteConfig";
 
 export default function PrivacyPolicy() {
-  useSEO({
-    title: "Privacy Policy | Cavanaugh Mediation, PLLC",
-    description: "Privacy policy for Cavanaugh Mediation, PLLC. Learn how we collect, use, and protect your personal information.",
-    canonical: "/privacy",
-  });
 
   return (
     <div>
@@ -41,7 +35,7 @@ export default function PrivacyPolicy() {
               <h2 className="text-2xl font-semibold text-[#1a1a1a] mb-4">Information Collection</h2>
               <p className="mb-4">
                 We may collect non-personal information, such as a domain name and IP Address. The
-                domain name and IP address reveals nothing personal about you other than the IP address
+                domain name and IP address reveal nothing personal about you other than the IP address
                 from which you have accessed our site. We may also collect information about the type of
                 Internet browser you are using, operating system, what brought you to our Website, as
                 well as which of our Web pages you have accessed.
@@ -148,7 +142,7 @@ export default function PrivacyPolicy() {
             <div>
               <h2 className="text-2xl font-semibold text-[#1a1a1a] mb-4">Surveys & Contests</h2>
               <p>
-                From time-to-time our site may request information via surveys or contests. Participation
+                From time to time our site may request information via surveys or contests. Participation
                 in these surveys or contests is completely voluntary and you may choose whether or not to
                 participate and therefore disclose this information. Information requested may include
                 contact information (such as name and shipping address), and demographic information

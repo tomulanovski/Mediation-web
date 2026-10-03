@@ -1,20 +1,14 @@
 import { Link } from "react-router-dom";
 import { Heart, Users, FileText, Shield, Home, Briefcase, ArrowRight, CheckCircle } from "lucide-react";
-import useSEO from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/shared/AnimatedSection";
-import SectionHeader from "@/components/shared/SectionHeader";
-import { services, processSteps } from "@/data/services";
+import ProcessSection from "@/components/shared/ProcessSection";
+import { services } from "@/data/services";
 
 const iconMap = { Heart, Users, FileText, Shield, Home, Briefcase };
 
 export default function Services() {
-  useSEO({
-    title: "Family Mediation Services | Cavanaugh Mediation, PLLC",
-    description: "Divorce mediation, parenting plans, property division, prenuptial agreements, and post-decree modifications. Affordable family mediation throughout Florida.",
-    canonical: "/services",
-  });
 
   return (
     <div>
@@ -57,7 +51,11 @@ export default function Services() {
                         {Icon && <Icon className="w-7 h-7 text-[#8ab4d5]" strokeWidth={1.5} />}
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-2xl font-semibold text-[#1a1a1a] mb-3">{service.title}</h3>
+                        <h3 className="text-2xl font-semibold text-[#1a1a1a] mb-3">
+                          <Link to={`/services/${service.id}`} className="hover:text-[#3b7797] transition-colors">
+                            {service.title}
+                          </Link>
+                        </h3>
                         <p className="text-[#5a6a7a] leading-relaxed mb-6 font-sans">{service.description}</p>
                         <ul className="space-y-2">
                           {service.features.map((feature, i) => (
@@ -67,6 +65,13 @@ export default function Services() {
                             </li>
                           ))}
                         </ul>
+                        <Link
+                          to={`/services/${service.id}`}
+                          className="inline-flex items-center gap-2 mt-6 text-[#1a1a1a] text-sm font-medium font-sans hover:gap-3 transition-all"
+                        >
+                          Learn More
+                          <ArrowRight className="w-4 h-4" />
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -77,33 +82,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Our Process */}
-      <section className="py-20 lg:py-28 bg-[#1a1a1a]">
-        <div className="container mx-auto px-6 lg:px-12">
-          <SectionHeader
-            label="How It Works"
-            title={<>The Mediation <span className="font-semibold">Process</span></>}
-            subtitle="A clear, structured approach designed to guide you from conflict to resolution."
-            centered
-            light
-          />
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {processSteps.map((step, index) => (
-              <AnimatedSection key={step.step} delay={index * 0.15}>
-                <div className="relative">
-                  <div className="text-6xl font-light text-[#8ab4d5]/20 mb-4 font-sans">{step.step}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
-                  <p className="text-[#a8b8c8] leading-relaxed font-sans">{step.description}</p>
-                  {index < processSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-8 right-0 w-1/2 h-px bg-gradient-to-r from-[#8ab4d5]/50 to-transparent" />
-                  )}
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ProcessSection />
 
       {/* Fees & Info */}
       <section className="py-20 lg:py-28 bg-white">

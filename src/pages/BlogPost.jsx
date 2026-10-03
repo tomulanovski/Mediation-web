@@ -1,67 +1,23 @@
-import { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Calendar, User, ArrowLeft, ArrowRight } from "lucide-react";
-import { format } from "date-fns";
+import { format, parseISO } from "date-fns";
 import { Button } from "@/components/ui/button";
 import BlogContent from "@/components/blog/BlogContent";
 import AnimatedSection from "@/components/shared/AnimatedSection";
-import { blogPosts } from "@/data/blogPosts";
-import { siteConfig } from "@/config/siteConfig";
-import useSEO from "@/hooks/useSEO";
+import NotFound from "@/pages/NotFound";
+import { publishedPosts } from "@/seo/pages";
 
 export default function BlogPost() {
   const { slug } = useParams();
 
-  const post = blogPosts.find((p) => p.slug === slug && !p.hidden);
-  const visiblePosts = blogPosts.filter((p) => !p.hidden);
-  const currentIndex = visiblePosts.findIndex((p) => p.slug === slug);
-  const nextPost = currentIndex < visiblePosts.length - 1 ? visiblePosts[currentIndex + 1] : null;
-  const prevPost = currentIndex > 0 ? visiblePosts[currentIndex - 1] : null;
+  const currentIndex = publishedPosts.findIndex((p) => p.slug === slug);
+  const post = publishedPosts[currentIndex];
+  const nextPost = currentIndex < publishedPosts.length - 1 ? publishedPosts[currentIndex + 1] : null;
+  const prevPost = currentIndex > 0 ? publishedPosts[currentIndex - 1] : null;
 
-  const articleSchema = useMemo(() => post ? {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": post.title,
-    "description": post.excerpt,
-    "author": {
-      "@type": "Person",
-      "name": post.author,
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": siteConfig.name,
-      "logo": { "@type": "ImageObject", "url": `${siteConfig.url}/assets/logo.webp` },
-    },
-    "datePublished": post.date,
-    "image": post.image,
-    "mainEntityOfPage": `${siteConfig.url}/blog/${post.slug}`,
-  } : null, [post]);
-
-  useSEO({
-    title: post ? `${post.title} | Cavanaugh Mediation` : "Article Not Found",
-    description: post?.excerpt,
-    canonical: post ? `/blog/${post.slug}` : undefined,
-    type: "article",
-    schema: articleSchema,
-  });
-
-  if (!post) {
-    return (
-      <div className="min-h-[60vh] flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-3xl font-semibold text-[#1a1a1a] mb-4">Article Not Found</h1>
-          <p className="text-[#5a6a7a] mb-6 font-sans">The article you're looking for doesn't exist.</p>
-          <Link to="/blog">
-            <Button className="bg-[#1a1a1a] hover:bg-[#333333] text-white font-sans">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Blog
-            </Button>
-          </Link>
-        </div>
-      </div>
-    );
-  }
+  // Same markup as the catch-all route, so the prerendered 404 page hydrates cleanly here.
+  if (!post) return <NotFound />;
 
   return (
     <div>
@@ -102,7 +58,7 @@ export default function BlogPost() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
-                  {format(new Date(post.date), "MMMM d, yyyy")}
+                  {format(parseISO(post.date), "MMMM d, yyyy")}
                 </div>
                 {post.readTime && <span>{post.readTime}</span>}
               </div>

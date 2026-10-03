@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight } from "lucide-react";
-import { format } from "date-fns";
+import { format, parseISO } from "date-fns";
 
 export default function BlogCard({ post }) {
   return (
@@ -32,7 +32,7 @@ export default function BlogCard({ post }) {
             </div>
             <div className="flex items-center gap-1">
               <Calendar className="w-3 h-3" />
-              {format(new Date(post.date), "MMM d, yyyy")}
+              {format(parseISO(post.date), "MMM d, yyyy")}
             </div>
           </div>
           <div className="flex items-center gap-2 text-[#1a1a1a] text-sm font-medium group-hover:gap-4 transition-all font-sans">

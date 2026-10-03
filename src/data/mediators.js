@@ -18,7 +18,7 @@ export const mediators = [
     ],
     certifications: [
       "Author of Divorce in Florida",
-      "Recognized as 'Top 10' Family Law Attorney in client satisfaction",
+      'Recognized as "Top 10" Family Law Attorney in client satisfaction',
       "2023 Best of Collier Award for Family Law",
       "Family Law Rules Committee of the Florida Bar",
       "Grievance Committee for the 20th Judicial Circuit"

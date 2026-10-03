@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import { motion } from "framer-motion";
 import {
   Accordion,
@@ -8,29 +7,8 @@ import {
 } from "@/components/ui/accordion";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import { faqs } from "@/data/faqs";
-import useSEO from "@/hooks/useSEO";
 
 export default function FAQ() {
-  const faqSchema = useMemo(() => ({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map((faq) => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer,
-      },
-    })),
-  }), []);
-
-  useSEO({
-    title: "FAQ | Cavanaugh Mediation, PLLC",
-    description: "Answers to common questions about family mediation in Florida — costs, confidentiality, process, and what to expect.",
-    canonical: "/faq",
-    schema: faqSchema,
-  });
-
   return (
     <div>
       {/* Hero Section */}

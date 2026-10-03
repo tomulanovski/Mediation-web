@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Check } from "lucide-react";
-import useSEO from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/shared/AnimatedSection";
+import { formatPrice, hourlyRate, hourlyServices, packages } from "@/data/pricing";
 
 function PricingCard({ featured, badge, title, price, priceNote, pill, items, itemsLabel }) {
   return (
@@ -61,12 +61,6 @@ function SectionLabel({ children }) {
 }
 
 export default function Pricing() {
-  useSEO({
-    title: "Pricing | Cavanaugh Mediation, PLLC",
-    description:
-      "Simple, transparent mediation pricing. Flat-fee divorce mediation for $2,500 or $350/hr. Prenuptial agreements from $1,100. No hidden fees.",
-    canonical: "/pricing",
-  });
 
   return (
     <div>
@@ -111,86 +105,38 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* Divorce Mediation */}
-      <section className="py-14 lg:py-18 bg-[#faf9f6]">
-        <div className="container mx-auto px-6 lg:px-12 max-w-5xl">
-          <SectionLabel>Divorce Mediation</SectionLabel>
-          <div className="grid md:grid-cols-2 gap-8">
-            <AnimatedSection>
-              <PricingCard
-                featured
-                badge="Most popular"
-                title="Flat-Fee Package"
-                price="$2,500"
-                priceNote="One total. That's it."
-                pill="$1,250 per person when split between parties"
-                itemsLabel="Includes"
-                items={[
-                  "Up to 8 hours of mediation sessions",
-                  "Pre-session preparation and document review",
-                  "Drafting of the Martial Settlement Agreement and Parenting Plan",
-                  "Walk through of how to file documents",
-                  "No extra charges at any stage",
-                ]}
-              />
-            </AnimatedSection>
-            <AnimatedSection delay={0.1}>
-              <PricingCard
-                title="Hourly Rate"
-                price="$350/hr"
-                priceNote="Billed in 30-min increments"
-                pill="Fee typically split between both parties"
-                itemsLabel="Good if you expect"
-                items={[
-                  "A straightforward, quick resolution",
-                  "Fewer than 4 to 5 hours of sessions",
-                  "Minimal document preparation needed",
-                ]}
-              />
-            </AnimatedSection>
+      {/* Flat-Fee Packages */}
+      {packages.map((pkg, index) => (
+        <section key={pkg.serviceId} className={`py-14 lg:py-18 ${index % 2 === 0 ? "bg-[#faf9f6]" : "bg-white"}`}>
+          <div className="container mx-auto px-6 lg:px-12 max-w-5xl">
+            <SectionLabel>{pkg.name}</SectionLabel>
+            <div className="grid md:grid-cols-2 gap-8">
+              <AnimatedSection>
+                <PricingCard
+                  featured
+                  badge="Most popular"
+                  title="Flat-Fee Package"
+                  price={formatPrice(pkg.flatFee)}
+                  priceNote="One total. That's it."
+                  pill={`${formatPrice(pkg.flatFee / 2)} per person when split between parties`}
+                  itemsLabel="Includes"
+                  items={pkg.flatFeeItems}
+                />
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <PricingCard
+                  title="Hourly Rate"
+                  price={`${formatPrice(hourlyRate)}/hr`}
+                  priceNote="Billed in 30-min increments. Document drafting not included."
+                  pill="Fee typically split between both parties"
+                  itemsLabel="Good if you expect"
+                  items={pkg.hourlyFit}
+                />
+              </AnimatedSection>
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Prenuptial & Postnuptial */}
-      <section className="py-14 lg:py-18 bg-white">
-        <div className="container mx-auto px-6 lg:px-12 max-w-5xl">
-          <SectionLabel>Prenuptial &amp; Postnuptial Agreements</SectionLabel>
-          <div className="grid md:grid-cols-2 gap-8">
-            <AnimatedSection>
-              <PricingCard
-                featured
-                badge="Most popular"
-                title="Flat-Fee Package"
-                price="$1,100"
-                priceNote="One total. That's it."
-                pill="$550 per person when split between parties"
-                itemsLabel="Includes"
-                items={[
-                  "Up to 3 hours of mediation sessions",
-                  "Pre-session preparation and document review",
-                  "Drafting of the final agreement",
-                  "No extra charges at any stage",
-                ]}
-              />
-            </AnimatedSection>
-            <AnimatedSection delay={0.1}>
-              <PricingCard
-                title="Hourly Rate"
-                price="$350/hr"
-                priceNote="Billed in 30-min increments"
-                pill="Fee typically split between both parties"
-                itemsLabel="Good if you expect"
-                items={[
-                  "A focused, efficient session",
-                  "Fewer than 2 hours of discussion",
-                  "A largely agreed-upon starting point",
-                ]}
-              />
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
+        </section>
+      ))}
 
       {/* Post-Decree & Other */}
       <section className="py-14 lg:py-18 bg-[#faf9f6]">
@@ -199,36 +145,23 @@ export default function Pricing() {
             Post-Decree Modifications &amp; Other Family Matters
           </SectionLabel>
           <div className="grid md:grid-cols-2 gap-8">
-            <AnimatedSection>
-              <div className="bg-[#f5f3ef] p-8 lg:p-10 flex items-start justify-between gap-6">
-                <div>
-                  <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2">
-                    Post-Decree Modifications
-                  </h3>
-                  <p className="text-[#5a6a7a] text-sm font-sans leading-relaxed">
-                    Parenting disputes, support adjustments, and more.
-                  </p>
+            {hourlyServices.map((service, index) => (
+              <AnimatedSection key={service.name} delay={index * 0.1}>
+                <div className="bg-[#f5f3ef] p-8 lg:p-10 flex items-start justify-between gap-6">
+                  <div>
+                    <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2">
+                      {service.name}
+                    </h3>
+                    <p className="text-[#5a6a7a] text-sm font-sans leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+                  <span className="text-xl font-light text-[#1a1a1a] whitespace-nowrap">
+                    {`${formatPrice(hourlyRate)} / hour`}
+                  </span>
                 </div>
-                <span className="text-xl font-light text-[#1a1a1a] whitespace-nowrap">
-                  $350 / hour
-                </span>
-              </div>
-            </AnimatedSection>
-            <AnimatedSection delay={0.1}>
-              <div className="bg-[#f5f3ef] p-8 lg:p-10 flex items-start justify-between gap-6">
-                <div>
-                  <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2">
-                    Other Family Mediation
-                  </h3>
-                  <p className="text-[#5a6a7a] text-sm font-sans leading-relaxed">
-                    Elder care, inheritance, and other family matters.
-                  </p>
-                </div>
-                <span className="text-xl font-light text-[#1a1a1a] whitespace-nowrap">
-                  $350 / hour
-                </span>
-              </div>
-            </AnimatedSection>
+              </AnimatedSection>
+            ))}
           </div>
         </div>
       </section>

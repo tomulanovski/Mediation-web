@@ -4,11 +4,11 @@ import { siteConfig } from "@/config/siteConfig";
 import { navLinks } from "@/config/navigation";
 
 const serviceLinks = [
-  { label: "Divorce Mediation", path: "/services" },
-  { label: "Parenting Plans", path: "/services" },
-  { label: "Property Division", path: "/services" },
-  { label: "Prenuptial Agreements", path: "/services" },
-  { label: "Post-Decree Modifications", path: "/services" },
+  { label: "Divorce Mediation", path: "/services/divorce-mediation" },
+  { label: "Parenting Plans", path: "/services/parenting-plans" },
+  { label: "Property Division", path: "/services/property-division" },
+  { label: "Prenuptial Agreements", path: "/services/prenuptial-postnuptial-agreements" },
+  { label: "Post-Decree Modifications", path: "/services/post-decree-modifications" },
 ];
 
 export default function Footer() {
@@ -99,7 +99,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="container mx-auto px-6 lg:px-12 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-[#a8b8c8] text-sm font-sans">
+          <p className="text-[#a8b8c8] text-sm font-sans" suppressHydrationWarning>
             &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
           <div className="flex items-center gap-6">

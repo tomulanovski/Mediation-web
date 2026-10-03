@@ -99,7 +99,7 @@ export const blogPosts = [
       { type: "heading", text: "Timeline" },
       { type: "paragraph", text: "Litigated divorces can take 12-18 months or longer. Mediated divorces are often completed in 2-4 months. This faster resolution means less stress and uncertainty for everyone involved." },
       { type: "heading", text: "Emotional Impact" },
-      { type: "paragraph", text: "Litigation is inherently adversarial, with each side represented by an attorney whose job is to 'win.' This approach often increases conflict and makes future co-parenting more difficult. Mediation, by contrast, teaches communication and problem-solving skills that benefit families long after the process is complete." },
+      { type: "paragraph", text: "Litigation is inherently adversarial, with each side represented by an attorney whose job is to \"win.\" This approach often increases conflict and makes future co-parenting more difficult. Mediation, by contrast, teaches communication and problem-solving skills that benefit families long after the process is complete." },
       { type: "heading", text: "When Litigation May Be Necessary" },
       { type: "list", items: ["Domestic violence or safety concerns", "One party refuses to participate in good faith", "Significant power imbalances that can't be addressed in mediation", "Complex asset concealment or financial fraud"] },
       { type: "paragraph", text: "For most families, however, mediation offers a more constructive, efficient, and affordable path forward." }
@@ -137,7 +137,7 @@ export const blogPosts = [
     image: "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=800",
     content: [
       { type: "paragraph", text: "After divorce, effective communication with your co-parent becomes one of the most important skills you can develop, not for your own sake, but for your children's emotional health and stability." },
-      { type: "heading", text: "Keep It Business-Like" },
+      { type: "heading", text: "Keep It Businesslike" },
       { type: "paragraph", text: "Think of your co-parenting relationship as a business partnership focused on your children's well-being. Keep communications factual, brief, and child-focused. Avoid rehashing past grievances or engaging in emotional debates." },
       { type: "heading", text: "Use Written Communication" },
       { type: "paragraph", text: "Email and co-parenting apps provide a written record and allow both parties to respond thoughtfully rather than reactively. Apps like OurFamilyWizard or TalkingParents are specifically designed for co-parent communication." },

@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```bash
 npm run dev      # Start local dev server (Vite, http://localhost:5173)
-npm run build    # Production build to dist/
+npm run build    # Client build + SSR build + prerender of every route to dist/
 npm run preview  # Preview the production build locally
 ```
 
@@ -46,7 +46,17 @@ Static assets (logo, images) live in `public/assets/` and are served at `/assets
 
 ## Architecture
 
-**React 19 + Vite SPA** using React Router v7 for client-side routing. All pages are lazy-loaded via `React.lazy` and wrapped in a single `<Layout>` (Header + Footer + ScrollToTop).
+**React 19 + Vite SPA** using React Router v7 for client-side routing. All pages are lazy-loaded via `React.lazy` and wrapped in a single `<Layout>` (Header + Footer + ScrollToTop + PageHead).
+
+### Prerendering & SEO
+Every route is prerendered to static HTML at build time so content is readable without JavaScript:
+- `src/entry-server.jsx` renders a URL with `StaticRouter`; `scripts/prerender.js` writes `dist/<route>/index.html`, `dist/404.html`, `dist/sitemap.xml` and `dist/llms.txt`.
+- `index.html` is a template: `<!--app-head-->` and `<!--app-html-->` are filled by the prerender step. `main.jsx` hydrates prerendered markup (and renders normally in dev).
+- `src/seo/pages.js` — single source for each route's title, description and JSON-LD, plus the list of all paths (sitemap + prerender). Add new routes here.
+- `src/seo/schema.js` — JSON-LD builders (organization, mediators, services/offers, FAQ, articles, breadcrumbs). `src/seo/llms.js` — /llms.txt.
+- `PageHead` updates head tags on client-side navigation using the same `renderHead`.
+- Components must render identically on server and client (no `window`/date-dependent output during render).
+- nginx must use `try_files $uri $uri/index.html =404;` with `error_page 404 /404.html;`.
 
 ### Path alias
 `@` maps to `./src` (configured in `vite.config.js`). Use `@/` imports throughout.
@@ -54,7 +64,8 @@ Static assets (logo, images) live in `public/assets/` and are served at `/assets
 ### Data layer
 All content is static — defined in `src/data/`:
 - `mediators.js` — mediator profiles (bio, credentials, image URLs)
-- `services.js` — service cards and 4-step process
+- `services.js` — services (each `id` is its `/services/:id` URL slug) and the process steps
+- `pricing.js` — flat-fee packages and hourly rate, used by the Pricing page, service pages, JSON-LD and llms.txt
 - `blogPosts.js` — full blog post content (structured as typed blocks: `paragraph`, `heading`, `list`, `quote`)
 - `faqs.js` — FAQ accordion data
 

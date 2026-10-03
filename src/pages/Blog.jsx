@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Search } from "lucide-react";
-import useSEO from "@/hooks/useSEO";
 import { Input } from "@/components/ui/input";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import BlogCard from "@/components/blog/BlogCard";
@@ -11,11 +10,6 @@ export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
 
-  useSEO({
-    title: "Family Mediation Blog | Cavanaugh Mediation, PLLC",
-    description: "Expert insights on divorce mediation, co-parenting, property division, and family law in Florida from certified mediators.",
-    canonical: "/blog",
-  });
 
   const filteredPosts = blogPosts.filter((post) => {
     if (post.hidden) return false;

@@ -12,7 +12,7 @@ export const services = [
     ]
   },
   {
-    id: "child-custody",
+    id: "parenting-plans",
     icon: "Users",
     title: "Time-Sharing & Parenting Plans",
     description: "Create time-sharing arrangements and parenting plans that prioritize your children's well-being while respecting both parents' wishes.",
@@ -36,7 +36,7 @@ export const services = [
     ]
   },
   {
-    id: "prenuptial",
+    id: "prenuptial-postnuptial-agreements",
     icon: "Shield",
     title: "Prenuptial & Postnuptial Agreements",
     description: "Create clear, fair agreements that protect both parties and establish expectations for the future. Our mediators help couples have productive conversations about finances and assets.",
@@ -60,7 +60,7 @@ export const services = [
     ]
   },
   {
-    id: "post-decree",
+    id: "post-decree-modifications",
     icon: "Briefcase",
     title: "Post-Decree Modifications",
     description: "Life circumstances change, and sometimes existing agreements need to be modified. We help families revisit and update parenting plans, support, and other arrangements as needed.",
