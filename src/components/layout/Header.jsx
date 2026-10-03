@@ -5,6 +5,25 @@ import { siteConfig } from "@/config/siteConfig";
 import { navLinks } from "@/config/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 
+// The black header button: "Contact" by default, or Calendly "Book Mediation" when siteConfig.bookingEnabled.
+function HeaderAction({ className }) {
+  if (siteConfig.bookingEnabled) {
+    return (
+      <a href={siteConfig.calendlyUrl} target="_blank" rel="noopener noreferrer" className={className}>
+        Book Mediation
+      </a>
+    );
+  }
+  return (
+    <Link to="/contact" className={className}>
+      Contact
+    </Link>
+  );
+}
+
+// When the black button is "Contact", the plain Contact link is dropped so it isn't shown twice.
+const menuLinks = siteConfig.bookingEnabled ? navLinks : navLinks.filter((link) => link.path !== "/contact");
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -58,7 +77,7 @@ export default function Header() {
 
             {/* Desktop Navigation */}
             <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-8">
-              {navLinks.map((link) => (
+              {menuLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
@@ -76,14 +95,7 @@ export default function Header() {
                   />
                 </Link>
               ))}
-              <a
-                href={siteConfig.calendlyUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#1a1a1a] hover:bg-[#333333] text-white px-6 py-2.5 text-sm font-medium transition-all duration-300 font-sans"
-              >
-                Book Mediation
-              </a>
+              <HeaderAction className="bg-[#1a1a1a] hover:bg-[#333333] text-white px-6 py-2.5 text-sm font-medium transition-all duration-300 font-sans" />
             </nav>
 
             {/* Mobile Menu Button */}
@@ -118,7 +130,7 @@ export default function Header() {
               transition={{ duration: 0.2, delay: 0.1 }}
               className="flex flex-col p-6 gap-1"
             >
-              {navLinks.map((link) => (
+              {menuLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
@@ -132,14 +144,7 @@ export default function Header() {
                 </Link>
               ))}
               <div className="mt-4 pt-4 border-t border-[#e8dcc4]">
-                <a
-                  href={siteConfig.calendlyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block bg-[#1a1a1a] text-white text-center py-3 px-6 text-base font-medium font-sans"
-                >
-                  Book Mediation
-                </a>
+                <HeaderAction className="block bg-[#1a1a1a] text-white text-center py-3 px-6 text-base font-medium font-sans" />
               </div>
               <div className="mt-6 space-y-3 text-sm text-[#5a6a7a] font-sans">
                 <a href={`tel:${siteConfig.phone}`} className="flex items-center gap-2">

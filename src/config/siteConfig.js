@@ -9,6 +9,8 @@ export const siteConfig = {
     serviceArea: "Serving All of Florida Virtually",
   },
   calendlyUrl: "https://calendly.com/cavanaughmediation",
+  // false: header button and CTAs go to /contact. true: they open Calendly ("Book Mediation").
+  bookingEnabled: false,
   url: "https://www.cavanaughmediation.com",
   social: {
     linkedin: "",

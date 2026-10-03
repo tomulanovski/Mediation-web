@@ -64,6 +64,6 @@ export const faqs = [
   },
   {
     question: "How do I get started?",
-    answer: `Book a mediation session online through our website, call us at ${siteConfig.phone}, or send us a message and we'll get back to you within 24 hours. We're available Monday through Saturday, 9:00 AM to 9:00 PM.`
+    answer: `${siteConfig.bookingEnabled ? "Book a mediation session online through our website, call" : "Call"} us at ${siteConfig.phone}, or send us a message through our contact page and we'll get back to you within 24 hours. We're available Monday through Saturday, 9:00 AM to 9:00 PM.`
   }
 ];

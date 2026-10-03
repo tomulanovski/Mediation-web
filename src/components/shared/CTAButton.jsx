@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Calendar } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 import { siteConfig } from "@/config/siteConfig";
 import { cn } from "@/lib/utils";
 
+// Goes to the contact page, or opens Calendly when siteConfig.bookingEnabled is true.
 export default function CTAButton({ text, className, variant = "default", size = "lg" }) {
   return (
     <Button
@@ -14,10 +16,17 @@ export default function CTAButton({ text, className, variant = "default", size =
         className
       )}
     >
-      <a href={siteConfig.calendlyUrl} target="_blank" rel="noopener noreferrer">
-        <Calendar className="mr-2 h-4 w-4" />
-        {text || "Book Mediation"}
-      </a>
+      {siteConfig.bookingEnabled ? (
+        <a href={siteConfig.calendlyUrl} target="_blank" rel="noopener noreferrer">
+          <Calendar className="mr-2 h-4 w-4" />
+          {text || "Book Mediation"}
+        </a>
+      ) : (
+        <Link to="/contact">
+          {text || "Contact Us"}
+          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+        </Link>
+      )}
     </Button>
   );
 }

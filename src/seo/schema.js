@@ -15,7 +15,7 @@ const florida = { "@type": "State", name: "Florida", sameAs: "https://en.wikiped
 const virtualChannel = {
   "@type": "ServiceChannel",
   name: "Virtual mediation sessions",
-  serviceUrl: siteConfig.calendlyUrl,
+  serviceUrl: siteConfig.bookingEnabled ? siteConfig.calendlyUrl : `${base}/contact`,
   servicePhone: { "@type": "ContactPoint", telephone: siteConfig.phone },
 };
 const proSe =

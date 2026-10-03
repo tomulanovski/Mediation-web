@@ -56,7 +56,7 @@ const staticPages = {
     name: "Contact Us",
     title: "Contact Us | Cavanaugh Mediation, PLLC",
     description:
-      "Schedule a family mediation session with Cavanaugh Mediation. Call (239) 212-1599 or book online. Serving all of Florida virtually.",
+      "Schedule a family mediation session with Cavanaugh Mediation. Call (239) 212-1599 or send us a message. Serving all of Florida virtually.",
   },
   "/privacy": {
     name: "Privacy Policy",

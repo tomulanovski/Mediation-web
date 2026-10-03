@@ -21,7 +21,7 @@ export function renderLlmsTxt() {
 - Phone: ${siteConfig.phone}
 - Email: ${siteConfig.email}
 - Hours: Monday to Saturday, 9:00 AM to 9:00 PM
-- Book a mediation: ${siteConfig.calendlyUrl}
+- ${siteConfig.bookingEnabled ? `Book a mediation: ${siteConfig.calendlyUrl}` : `Get started: call or send a message at ${siteConfig.url}/contact`}
 
 ## Services
 
